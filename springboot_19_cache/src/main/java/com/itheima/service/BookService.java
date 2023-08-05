@@ -10,4 +10,5 @@ public interface BookService {
     public boolean update(Book book);
     public boolean delete(Integer id);
     public List<Book> getAll();
+    void update (String bookId);
 }

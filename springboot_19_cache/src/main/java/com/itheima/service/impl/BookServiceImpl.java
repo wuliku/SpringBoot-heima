@@ -56,4 +56,9 @@ public class BookServiceImpl implements BookService {
     public List<Book> getAll() {
         return bookDao.selectList(null);
     }
+
+    @Override
+    public void update(String bookId) {
+
+    }
 }

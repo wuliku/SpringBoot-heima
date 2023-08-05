@@ -2,6 +2,9 @@ package com.itheima;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import redis.clients.jedis.Jedis;
+import redis.clients.jedis.JedisPool;
+import redis.clients.jedis.JedisPoolConfig;
 
 @SpringBootApplication
 public class Springboot16RedisApplication {
@@ -26,6 +29,12 @@ public class Springboot16RedisApplication {
         }
         //重新将string[]转换成string
         System.out.println(replace1);
+    }
+
+    static {
+        JedisPoolConfig jedisPoolConfig = new JedisPoolConfig();
+        JedisPool jedisPool = new JedisPool();
+        Jedis resource = jedisPool.getResource();
     }
 
 
