@@ -13,6 +13,7 @@ public class Springboot0101QuickstartApplication {
         ConfigurableApplicationContext ctx = SpringApplication.run(Springboot0101QuickstartApplication.class, args);
         BookController bean = ctx.getBean(BookController.class);
         System.out.println("bean======>" + bean);
+        System.out.println();
         User user = ctx.getBean(User.class);
         System.out.println(user);
     }
